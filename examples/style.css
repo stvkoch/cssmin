@@ -1,0 +1,35 @@
+body {
+ background: #eee url(   /images/bg.png  ) 0 0 no-repeat;
+ background: #eee url(   "/images/bg.png"  ) 0 0 no-repeat;
+ color: #1D1D1D; 
+}
+
+h1 {
+  font: 30px 1.5 "Helvetica", "Arial";
+}
+
+ul li {
+  padding: 5px 10px;
+}
+
+ul li:first-child {
+  background   : green  ;
+  border-bottom: 1px "solid" red;
+}
+
+ul :last-child {
+  background: red;
+}
+
+ul *:last-child {
+  background-color: black;
+}
+
+ul * :last-child {
+  background-color: yellow;
+}
+
+ul li > ul > li:first-child + li {
+  background: #cc0000;
+  -webkit-box-shadow: 2px 2px 2px white;
+}
