@@ -14,7 +14,10 @@
 #include <ctype.h>
 #include <time.h>
 
-#define CSSMIN_VERSION "0.0.1"
+#define CSSMIN_VERSION "1.0.0"
+
+#ifndef CSSMIN_BUFFER_MAX
 #define CSSMIN_BUFFER_MAX 128
+#endif
 
 #endif
