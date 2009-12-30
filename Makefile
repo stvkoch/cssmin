@@ -16,6 +16,7 @@ uninstall: $(DEST)
 	rm -f $(DEST)
 	
 build:
+	@mkdir -p bin
 	@$(CC) $(CFLAGS) $(CFILES) -o $(BIN)
 	
 test: all
