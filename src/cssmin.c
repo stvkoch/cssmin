@@ -54,7 +54,7 @@ space:
   goto start;
 finish:
   stat("%15s : %d characters", "Removed", nchars - nchars_out);
-  stat("%15s : %0.2f%%", "Compressed", (float) (nchars - nchars_out) / nchars * 100);
+  stat("%15s : %0.2f%%", "Compression", (float) (nchars - nchars_out) / nchars * 100);
   stat("%15s : %0.5fms", "Duration", (float) (clock() - start) / CLOCKS_PER_SEC);
   return 0;
 }
