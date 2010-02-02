@@ -28,6 +28,7 @@ start:
     case '}' : goto blockend;
     case ' ' : goto space;
     case '"' : goto string;
+    case '0' : goto zero;
     case EOF : goto finish;
     default  : out;
   }
@@ -37,6 +38,10 @@ block:
   goto start;
 blockend:
   out; inblock = 0;
+  goto start;
+zero:
+  if (!isdigit(last) && next == '.') goto start;
+  out;
   goto start;
 string:
   out;

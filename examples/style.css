@@ -6,6 +6,7 @@ body {
 
 h1 {
   font: 30px 1.5 "Helvetica", "Arial";
+  font-size: 0.5em;
 }
 
 ul li {
