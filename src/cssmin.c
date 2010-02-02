@@ -18,7 +18,7 @@
 static int 
 minify(FILE *stream) {
   clock_t start = clock();
-  char c, l, n;
+  register int c, l, n;
   int inblock = 0, nchars = 0, nchars_out = 0;
 start:
   switch (++nchars, input) {
