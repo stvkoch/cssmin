@@ -4,7 +4,7 @@ NAME = cssmin
 BIN = bin/$(NAME)
 DEST = /usr/bin/$(NAME)
 CFILES = src/*.c
-CFLAGS = -std=c99
+CFLAGS = -std=c99 -O3
 
 all: build 
 	
