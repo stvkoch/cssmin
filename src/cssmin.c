@@ -10,8 +10,6 @@
 #define last l
 #define undo (ungetc(n, stream), n)
 #define next (n = fgetc(stream), undo)
-#define buffer (buf[bufpos++] = c)
-#define end (buf[bufpos] = '\0')
 #define out (++nchars_out, putchar(c))
 #define input (l = c, c = fgetc(stream))
 #define stat(S, ...) fprintf(stderr, S "\n", __VA_ARGS__);
@@ -20,8 +18,8 @@
 static int 
 minify(FILE *stream) {
   clock_t start = clock();
-  char c, l, n, buf[CSSMIN_BUFFER_MAX];
-  int bufpos = 0, inblock = 0, nchars = 0, nchars_out = 0;
+  char c, l, n;
+  int inblock = 0, nchars = 0, nchars_out = 0;
 start:
   switch (++nchars, input) {
     case '\n': goto start;

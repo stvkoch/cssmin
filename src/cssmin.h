@@ -16,8 +16,4 @@
 
 #define CSSMIN_VERSION "1.0.0"
 
-#ifndef CSSMIN_BUFFER_MAX
-#define CSSMIN_BUFFER_MAX 128
-#endif
-
 #endif
