@@ -19,7 +19,8 @@ static int
 minify(FILE *stream) {
   clock_t start = clock();
   register int c, l, n;
-  int inblock = 0, nchars = 0, nchars_out = 0;
+  unsigned short inblock = 0;
+  unsigned long nchars = 0, nchars_out = 0;
 start:
   switch (++nchars, input) {
     case '\n': goto start;
@@ -52,8 +53,9 @@ space:
       (next == '*' || last == '*')) out;  // foo * bar
   goto start;
 finish:
-  stat("Compressed : %0.1f%%", nchars_out / nchars * 100);
-  stat("Duration   : %0.5fms", (float) (clock() - start) / CLOCKS_PER_SEC);
+  stat("%15s : %d characters", "Removed", nchars - nchars_out);
+  stat("%15s : %0.2f%%", "Compressed", (float) (nchars - nchars_out) / nchars * 100);
+  stat("%15s : %0.5fms", "Duration", (float) (clock() - start) / CLOCKS_PER_SEC);
   return 0;
 }
 
