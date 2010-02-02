@@ -54,9 +54,8 @@ space:
       (next == '*' || last == '*')) out;  // foo * bar
   goto start;
 finish:
-  stat("bytes: %d", nchars);
-  stat("bytes saved: %d", nchars - nchars_out);
-  stat("duration: %0.5f milliseconds", (float) (clock() - start) / CLOCKS_PER_SEC);
+  stat("Compressed : %0.1f%%", nchars_out / nchars * 100);
+  stat("Duration   : %0.5fms", (float) (clock() - start) / CLOCKS_PER_SEC);
   return 0;
 }
 
