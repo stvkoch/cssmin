@@ -21,7 +21,10 @@ Or to concatinate many files
 ## Benchmarks
 
   Stylesheet with 450,000 lines
-    duration: 0.02593 milliseconds
+        Removed : 75383 characters
+    Compression : 15.35%
+       Duration : 0.02909ms
+
     
 ## License
     

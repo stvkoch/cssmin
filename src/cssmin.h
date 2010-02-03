@@ -14,6 +14,6 @@
 #include <ctype.h>
 #include <time.h>
 
-#define CSSMIN_VERSION "1.0.0"
+#define CSSMIN_VERSION "1.1.0"
 
 #endif
